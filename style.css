@@ -1,0 +1,277 @@
+
+ /* @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,500&family=Cinzel:wght@600&family=Dancing+Script:wght@500&family=Raleway:ital,wght@1,100&display=swap'); */
+
+*{
+    margin: 0;
+    padding: 0px;
+    font-family: 'Cinzel', serif;
+}
+
+.container{
+    width: 100%; /* full screen */
+    height: 100vh; /* vh : view port height full screen 1vh = 19.2px */
+    background-color: white;
+    position: relative; /* relative : it will stay in exact pos (parent) */
+}
+
+.navbar{
+    display: flex;/* to align to side */
+    justify-content: space-between;  /* to move navbar from ltr */
+    margin-left: 30px;
+    width: 85%;
+    align-items: center;
+}
+
+.logo{
+    width: 130px;
+}
+
+.listitem{
+    display: inline-block; /* display in line */
+    list-style: none; /* to remove the dot in list */
+    margin: 10px 20px;
+}
+
+.link{
+    color: black;
+    text-decoration: none; /* to remove underline */
+    font-weight: bold;
+}
+
+.link:hover{/* hover is an event when a mouse take over word or anything */
+    color: red;
+}
+
+#lastname{
+    color: orangered;
+    font-size: 50px;
+}
+
+.title{
+    margin-left: 8%;
+    margin-top: 13%;
+}
+
+.title-h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.download{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    margin: 30px 0;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.images{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+}
+
+.images img{/* descender selector */
+    position: absolute;/* to set the pos of img below */
+    height: 100%;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.images:hover #shape{
+    bottom: 70px;
+}
+
+.images:hover #girl{
+    left: 40%; /* initial value 50 we should give small value than that then it will move */
+}
+
+#about{
+    margin: 18% 8% 0px 8%;
+}
+
+.heading{
+    text-align: center;
+}
+
+.heading h2{/* descender selector */
+    font-size: 30px;
+    font-weight: bold;
+}
+.heading span{
+    font-size: 20px;
+    color: green;
+}
+
+.about-content{
+    margin-top: 2rem;    /* 1rem=16px */
+    display: grid;  /* align side */
+    grid-template-columns: repeat(2,1fr); /* 1fr =225px */
+    gap: 2rem;/* to give gap in b/w grids  */
+}
+
+.about-img img{
+    width: 80%;
+    border-radius: 1rem;
+}
+
+.about-details{
+    font-size: 18px;
+    font-weight: 400; /* to bold *600 or above are bold */
+    text-align: justify; /* starting and ending will be same */
+}
+
+.information{
+    margin-top: 1rem; /* 1rem:16px */
+}
+
+.info-box{
+    margin-bottom: 1rem;
+}
+
+.info-box span{/* descendnt selector */
+    margin-left: 1rem; /* space b/w icon and span(content) */
+}
+
+#skills{
+    margin: 8% 8% 0px 8%;     
+}
+
+.skill-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:2rem;
+    margin-top: 2rem;
+}
+
+.skill-img img{
+    width: 90%;
+    padding-left: 4rem;
+}
+
+html{
+    scroll-behavior: smooth; /* for smooth navigation */
+}
+
+.bar-container{
+    display: flex;
+    justify-content: space-between;/* space b/w the content and progress */
+    align-items: center;
+    padding: 1rem 0px;
+    margin: 1rem;
+    position: relative;
+}
+
+.bar-container h3, span{
+    font-size: 1.2rem;
+    font-weight: 400;    
+}
+
+.base-bar{
+    width: 100%;
+    height: 0.5rem;
+    border-radius:5rem;
+    background-color: black;
+    position: absolute;/* to come in top */
+    bottom: 0px;
+    left: 0px;
+}
+
+.html-bar{
+    background-color: goldenrod;
+    width: 95%;
+}
+
+.css-bar{
+     background-color: goldenrod;
+    width: 88%;
+}
+
+.react-bar{
+      background-color: goldenrod;
+    width: 89%;
+}
+
+.js-bar{
+     background-color: goldenrod;
+    width: 85%;
+}
+
+.icon-set{
+    margin-top: 3%;
+    display: flex;/* straight alignment */
+    justify-content: center;/* center of screen */
+    align-items:center;
+}
+
+.icons{
+    width: 50px;/* for distance b/w div*/
+    height: 50px;/* for distance  b/w div*/
+   /*  border: 1px solid rgb(88, 88, 147); */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;/* space b/w div */
+}
+
+.icons i{
+    font-size: 30px;
+    color: black;
+}
+
+.icons:hover{
+    background-image: linear-gradient(to bottom right,yellow,red);/* to give colour in combo when the mouse over it */
+}
+
+.icons:hover i{ /* colour change when we hover to div */
+    color: white;
+    animation: shake 0.75s;/* to give animation and if need a infinite shake give infinite after the tym*/
+}
+
+/* .icons i:hover{
+    color: white;  
+}   for chang clr when touches the icon */
+
+@keyframes shake{
+    10%{
+        transform: rotate(15deg);/* to come as it goes */
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+}
+
+footer{
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.up-arrow{
+   float: right;
+   border-radius: 50%;
+   width: 50px;
+   height: 50px;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   background-image: linear-gradient(to bottom right,yellow,red);
+}
+
+.up-arrow:hover i{
+    color: white;
+}
